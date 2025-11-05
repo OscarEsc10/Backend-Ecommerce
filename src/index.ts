@@ -20,7 +20,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/products", productsRouter);
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("E-commerce Mock API en TypeScript funcionando!");
+  res.send("E-commerce Mock API is working");
 });
 
 app.listen(PORT, () => {
