@@ -15,6 +15,21 @@ class AuthService {
         const { id, fullName, role } = user;
         return { id, fullName, email: user.email, role };
     }
+    register(input) {
+        const exists = this.users.findByEmail(input.email);
+        if (exists)
+            return null;
+        const created = this.users.create({
+            fullName: input.fullName,
+            email: input.email,
+            password: input.password,
+            address: input.address,
+            isActive: true,
+            role: 'user'
+        });
+        const { id, fullName, role } = created;
+        return { id, fullName, email: created.email, role };
+    }
 }
 exports.AuthService = AuthService;
 //# sourceMappingURL=auth.service.js.map

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const products_routes_1 = __importDefault(require("./routes/products.routes"));
 const auth_routes_1 = __importDefault(require("./routes/auth.routes"));
+const users_routes_1 = __importDefault(require("./routes/users.routes"));
 const database_1 = require("./core/database");
 const users_repository_1 = require("./repositories/users.repository");
 const cors_1 = __importDefault(require("cors"));
@@ -42,6 +43,7 @@ app.use(express_1.default.json());
 // Routes
 app.use("/api/auth", auth_routes_1.default);
 app.use("/api/products", products_routes_1.default);
+app.use("/api/users", users_routes_1.default);
 app.get("/", (req, res) => {
     res.send("E-commerce Mock API is working");
 });
@@ -56,7 +58,7 @@ app.listen(PORT, () => {
     console.log(`   - GET    https://backend-ecommerce-mock.onrender.com/api/products/:sku`);
     console.log(`   - POST   https://backend-ecommerce-mock.onrender.com/api/products`);
     console.log(`   - PUT    https://backend-ecommerce-mock.onrender.com/api/products/:sku`);
-    console.log(`   - DELETE https://backend-ecommerce-mock.onrender.com/api/products/:sku`);
+    console.log(`   - POST   https://backend-ecommerce-mock.onrender.com/api/auth/register`);
     console.log('\n Server started successfully!');
 });
 //# sourceMappingURL=index.js.map
