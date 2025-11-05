@@ -2,6 +2,7 @@ import express from "express";
 import type { Request, Response } from "express";
 import productsRouter from "./routes/products.routes";
 import authRouter from "./routes/auth.routes";
+import usersRouter from "./routes/users.routes";
 import { Database } from "./core/database";
 import { UsersRepository } from "./repositories/users.repository";
 import cors from "cors";
@@ -44,6 +45,7 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", authRouter);
 app.use("/api/products", productsRouter);
+app.use("/api/users", usersRouter);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("E-commerce Mock API is working");
@@ -60,6 +62,6 @@ app.listen(PORT, () => {
   console.log(`   - GET    https://backend-ecommerce-mock.onrender.com/api/products/:sku`);
   console.log(`   - POST   https://backend-ecommerce-mock.onrender.com/api/products`);
   console.log(`   - PUT    https://backend-ecommerce-mock.onrender.com/api/products/:sku`);
-  console.log(`   - DELETE https://backend-ecommerce-mock.onrender.com/api/products/:sku`);
+  console.log(`   - POST   https://backend-ecommerce-mock.onrender.com/api/auth/register`);
   console.log('\n Server started successfully!');
 });

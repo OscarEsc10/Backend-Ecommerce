@@ -14,3 +14,11 @@ export const login = (req: Request, res: Response) => {
   if (!result) return res.status(401).json({ success: false, message: 'invalid credentials' });
   return res.json({ success: true, user: result });
 };
+
+export const register = (req: Request, res: Response) => {
+  const { fullName, email, password, address } = req.body as { fullName: string; email: string; password: string; address: any };
+  if (!fullName || !email || !password || !address) return res.status(400).json({ success: false, message: 'fullName, email, password and address required' });
+  const created = authService.register({ fullName, email, password, address } as any);
+  if (!created) return res.status(409).json({ success: false, message: 'email already exists' });
+  return res.status(201).json({ success: true, user: created });
+};

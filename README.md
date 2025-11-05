@@ -85,6 +85,12 @@ Delete product:
 curl -X DELETE https://backend-ecommerce-mock.onrender.com/api/products/P011
 ```
 
+register an user
+```bash
+curl -X POST https://backend-ecommerce-mock.onrender.com/api/auth/register ^
+  -H "Content-Type: application/json" ^
+  -d "{\"email\":\"maria.lopez@example.com\",\"password\":\"Password123!\"}"
+```
 ## Project structure
 
 ```

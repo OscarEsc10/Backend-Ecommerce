@@ -12,4 +12,19 @@ export class AuthService {
     const { id, fullName, role } = user;
     return { id, fullName, email: user.email, role };
   }
+
+  register(input: Pick<User, 'fullName' | 'email' | 'password' | 'address'>): Pick<User, 'id'|'fullName'|'email'|'role'> | null {
+    const exists = this.users.findByEmail(input.email);
+    if (exists) return null;
+    const created = this.users.create({
+      fullName: input.fullName,
+      email: input.email,
+      password: input.password,
+      address: input.address,
+      isActive: true,
+      role: 'user'
+    } as Omit<User, 'id'|'createdAt'>);
+    const { id, fullName, role } = created;
+    return { id, fullName, email: created.email, role };
+  }
 }
