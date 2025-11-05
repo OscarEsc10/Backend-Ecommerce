@@ -61,28 +61,28 @@ Base URL: `http://localhost:3000`
 
 Login (PowerShell):
 ```bash
-curl -X POST http://localhost:3000/api/auth/login ^
+curl -X POST https://backend-ecommerce-mock.onrender.com/api/auth/login ^
   -H "Content-Type: application/json" ^
   -d "{\"email\":\"maria.lopez@example.com\",\"password\":\"Password123!\"}"
 ```
 
 Create product:
 ```bash
-curl -X POST http://localhost:3000/api/products ^
+curl -X POST https://backend-ecommerce-mock.onrender.com/api/products ^
   -H "Content-Type: application/json" ^
   -d "{\"sku\":\"P011\",\"name\":\"New Product\",\"brand\":\"BrandX\",\"quantity\":10,\"price\":19.99,\"isActive\":true,\"category\":\"Clothing\",\"imageUrl\":\"/images/products/new.jpg\",\"tags\":[\"tag1\"],\"dimensions\":{\"width\":10,\"height\":10,\"depth\":1},\"description\":\"Nice product\"}"
 ```
 
 Update product:
 ```bash
-curl -X PUT http://localhost:3000/api/products/P011 ^
+curl -X PUT https://backend-ecommerce-mock.onrender.com/api/products/P011 ^
   -H "Content-Type: application/json" ^
   -d "{\"price\":21.5,\"quantity\":12}"
 ```
 
 Delete product:
 ```bash
-curl -X DELETE http://localhost:3000/api/products/P011
+curl -X DELETE https://backend-ecommerce-mock.onrender.com/api/products/P011
 ```
 
 ## Project structure
