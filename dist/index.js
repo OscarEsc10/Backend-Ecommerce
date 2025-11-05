@@ -32,7 +32,12 @@ const corsOptions = {
     credentials: true
 };
 app.use((0, cors_1.default)(corsOptions));
-app.options('/:path(*)', (0, cors_1.default)(corsOptions));
+app.use((req, res, next) => {
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(204);
+    }
+    next();
+});
 app.use(express_1.default.json());
 // Routes
 app.use("/api/auth", auth_routes_1.default);
