@@ -1,0 +1,288 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Maria Lopez",
+      "email": "maria.lopez@example.com",
+      "password": "Password123!",
+      "isActive": true,
+      "role": "admin",
+      "address": {
+        "street": "123 Evergreen Ave",
+        "city": "Madrid",
+        "country": "Spain",
+        "zip": "28001"
+      },
+      "createdAt": "2025-10-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "fullName": "Carlos Perez",
+      "email": "carlos.perez@example.com",
+      "password": "Password123!",
+      "isActive": true,
+      "role": "user",
+      "address": {
+        "street": "456 Fake Street",
+        "city": "Barcelona",
+        "country": "Spain",
+        "zip": "08002"
+      },
+      "createdAt": "2025-10-05T12:30:00Z"
+    },
+    {
+      "id": 3,
+      "fullName": "Laura Fernandez",
+      "email": "laura.fernandez@example.com",
+      "password": "Password123!",
+      "isActive": true,
+      "role": "user",
+      "address": {
+        "street": "789 Grand Avenue",
+        "city": "Madrid",
+        "country": "Spain",
+        "zip": "28013"
+      },
+      "createdAt": "2025-10-08T09:15:00Z"
+    },
+    {
+      "id": 4,
+      "fullName": "Javier Ramos",
+      "email": "javier.ramos@example.com",
+      "password": "Password123!",
+      "isActive": false,
+      "role": "user",
+      "address": {
+        "street": "22 Moon Street",
+        "city": "Seville",
+        "country": "Spain",
+        "zip": "41001"
+      },
+      "createdAt": "2025-10-10T11:00:00Z"
+    },
+    {
+      "id": 5,
+      "fullName": "Ana Gomez",
+      "email": "ana.gomez@example.com",
+      "password": "Password123!",
+      "isActive": true,
+      "role": "user",
+      "address": {
+        "street": "99 Sun Avenue",
+        "city": "Valencia",
+        "country": "Spain",
+        "zip": "46001"
+      },
+      "createdAt": "2025-10-12T08:45:00Z"
+    }
+  ],
+  "products": [
+    {
+      "sku": "P002",
+      "name": "Blue Denim Jeans",
+      "brand": "Levi's",
+      "quantity": 50,
+      "price": 59.99,
+      "isActive": true,
+      "category": "Clothing",
+      "imageUrl": "/images/products/blue-denim-jeans.jpg",
+      "tags": [
+        "jeans",
+        "denim"
+      ],
+      "dimensions": {
+        "width": 40,
+        "height": 4,
+        "depth": 40
+      },
+      "description": "Slim fit denim jeans.",
+      "createdAt": "2025-10-02T09:30:00Z"
+    },
+    {
+      "sku": "P003",
+      "name": "Sports Sneakers",
+      "brand": "Nike",
+      "quantity": 80,
+      "price": 89.99,
+      "isActive": true,
+      "category": "Footwear",
+      "imageUrl": "/images/products/nike-sneakers.jpg",
+      "tags": [
+        "running",
+        "sport"
+      ],
+      "dimensions": {
+        "width": 35,
+        "height": 12,
+        "depth": 25
+      },
+      "description": "Lightweight sneakers for daily training.",
+      "createdAt": "2025-10-03T14:00:00Z"
+    },
+    {
+      "sku": "P004",
+      "name": "School Backpack",
+      "brand": "Adidas",
+      "quantity": 60,
+      "price": 34.99,
+      "isActive": true,
+      "category": "Accessories",
+      "imageUrl": "/images/products/adidas-backpack.jpg",
+      "tags": [
+        "backpack",
+        "school"
+      ],
+      "dimensions": {
+        "width": 30,
+        "height": 45,
+        "depth": 15
+      },
+      "description": "Ergonomic backpack with multiple compartments.",
+      "createdAt": "2025-10-04T16:20:00Z"
+    },
+    {
+      "sku": "P005",
+      "name": "Digital Sports Watch",
+      "brand": "Casio",
+      "quantity": 40,
+      "price": 49.99,
+      "isActive": true,
+      "category": "Accessories",
+      "imageUrl": "/images/products/casio-digital-watch.jpg",
+      "tags": [
+        "watch",
+        "digital"
+      ],
+      "dimensions": {
+        "width": 10,
+        "height": 5,
+        "depth": 2
+      },
+      "description": "Water-resistant watch with stopwatch function.",
+      "createdAt": "2025-10-05T11:45:00Z"
+    },
+    {
+      "sku": "P006",
+      "name": "Wireless Headphones",
+      "brand": "Sony",
+      "quantity": 70,
+      "price": 129.99,
+      "isActive": true,
+      "category": "Electronics",
+      "imageUrl": "/images/products/sony-headphones.jpg",
+      "tags": [
+        "bluetooth",
+        "audio"
+      ],
+      "dimensions": {
+        "width": 15,
+        "height": 18,
+        "depth": 8
+      },
+      "description": "Headphones with active noise cancellation.",
+      "createdAt": "2025-10-06T09:00:00Z"
+    },
+    {
+      "sku": "P007",
+      "name": "Smartwatch",
+      "brand": "Apple",
+      "quantity": 25,
+      "price": 399.99,
+      "isActive": true,
+      "category": "Electronics",
+      "imageUrl": "/images/products/apple-smartwatch.jpg",
+      "tags": [
+        "wearable",
+        "tech"
+      ],
+      "dimensions": {
+        "width": 5,
+        "height": 5,
+        "depth": 1
+      },
+      "description": "Smartwatch with health and fitness tracking.",
+      "createdAt": "2025-10-07T10:10:00Z"
+    },
+    {
+      "sku": "P008",
+      "name": "Leather Jacket",
+      "brand": "Zara",
+      "quantity": 30,
+      "price": 149.99,
+      "isActive": true,
+      "category": "Clothing",
+      "imageUrl": "/images/products/leather-jacket.jpg",
+      "tags": [
+        "fashion",
+        "leather"
+      ],
+      "dimensions": {
+        "width": 50,
+        "height": 5,
+        "depth": 60
+      },
+      "description": "Genuine leather jacket with metal zipper.",
+      "createdAt": "2025-10-08T08:00:00Z"
+    },
+    {
+      "sku": "P009",
+      "name": "Handbag",
+      "brand": "Michael Kors",
+      "quantity": 40,
+      "price": 179.99,
+      "isActive": true,
+      "category": "Accessories",
+      "imageUrl": "/images/products/mk-handbag.jpg",
+      "tags": [
+        "fashion",
+        "handbag"
+      ],
+      "dimensions": {
+        "width": 35,
+        "height": 25,
+        "depth": 10
+      },
+      "description": "Leather handbag with short handles and long strap.",
+      "createdAt": "2025-10-09T15:00:00Z"
+    },
+    {
+      "sku": "P010",
+      "name": "10'' Android Tablet",
+      "brand": "Samsung",
+      "quantity": 15,
+      "price": 249.99,
+      "isActive": true,
+      "category": "Electronics",
+      "imageUrl": "/images/products/samsung-tablet.jpg",
+      "tags": [
+        "tablet",
+        "android"
+      ],
+      "dimensions": {
+        "width": 25,
+        "height": 18,
+        "depth": 0.8
+      },
+      "description": "Android tablet with Full HD display.",
+      "createdAt": "2025-10-10T12:00:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Clothing"
+    },
+    {
+      "id": 2,
+      "name": "Footwear"
+    },
+    {
+      "id": 3,
+      "name": "Accessories"
+    },
+    {
+      "id": 4,
+      "name": "Electronics"
+    }
+  ]
+}
